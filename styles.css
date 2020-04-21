@@ -1,0 +1,785 @@
+body {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/****************************************
+***************BIG NAV ******************/
+
+.big-nav {
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 2px 6px 11px #000;
+
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    border-radius: 0px;
+    transform: translateX(0);
+    transition: 0.5s;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.big-nav-1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+.big-nav-2 {
+    width: 100%;
+    border-radius: 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    background-color: rgb(255, 255, 255, 0.95);
+}
+
+
+.big-nav-3 {
+    position: sticky;
+    margin: 4px auto;
+    width: 93%;
+    transform: translateX(0em);
+    border-radius: 39px;
+    background-color: rgba(255, 255, 255, 0.5);
+    top: 1em;
+}
+
+.main-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5em;
+    padding: 0;
+    transform: translateX(-8px);
+    clip-path: circle(50% at 50% 50%);
+}
+
+.delta {
+    font-size: 3rem;
+    font-weight: 900;
+    color: orange;
+
+    position: relative;
+}
+
+.delta::before,
+.delta::after {
+    position: absolute;
+    content: '';
+    background-color: orange;
+    height: 6px;
+    width: 10px;
+}
+
+.delta::after {
+    top: 49%;
+    right: -2.5px;
+}
+
+.delta::before {
+    top: 49%;
+    left: -2.5px;
+}
+
+.sidekick {
+    color: #fff;
+    font-weight: 900;
+    font-family: Lato, serif;
+    background-color: rgb(204, 204, 204);
+    padding: 2px 4px;
+    border-radius: 29px;
+    border: 2px gold solid;
+    box-shadow: 2px 2px 3px rgb(94, 93, 93);
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+.item .link {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: Georgia, serif;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.39s;
+}
+
+.item .link:hover {
+    color: orange;
+}
+
+
+.item:not(:first-child) {
+    margin-left: 1em;
+}
+
+.item .fab {
+    font-size: 18px;
+    transition: 0.4s;
+}
+
+.item .link:active .fab {
+    transform: scale(0.9);
+}
+
+.item .fa-facebook-f {
+    color: rgb(1, 79, 156);
+}
+
+.item .fa-whatsapp {
+    color: #34af23;
+}
+
+.item .fa-youtube {
+    color: red;
+}
+
+.item .fa-twitter {
+    color: #0084b4;
+}
+
+.item .link:hover .fab {
+    color: orange;
+}
+
+.search-bx {
+    display: flex;
+    flex-direction: row;
+    height: 25px;
+    width: 25em;
+    justify-content: center;
+    align-items: center;
+    margin: auto 0;
+    background-color: whitesmoke;
+    padding: 9px 2px;
+    border-radius: 29px;
+    box-shadow: 2px 5px 9px rgb(58, 58, 58);
+
+    transform: scale(0.9);
+}
+
+.search-bx .search-text {
+    outline: none;
+    border: none;
+    padding: 3px;
+    font-family: 'Arima Madurai', serif;
+    font-weight: 500;
+    font-size: 15.5px;
+    border-radius: 29px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: whitesmoke;
+}
+
+
+.search-text::-webkit-input-placeholder {
+    font-size: 14px;
+    color: grey;
+}
+
+
+.search-bx .search-bttn {
+    color: white;
+    text-decoration: none;
+    padding: 9px;
+    height: 15px;
+    width: 15px;
+
+    background-color: rgb(63, 240, 63);
+    transition: 0.3s;
+    border-radius: 29px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bttn:active {
+    box-shadow: 2px 5px 9px rgb(132, 132, 133);
+}
+
+.search-bttn:hover {
+    background-color: green;
+}
+
+/****************************************
+***************BIG NAV ******************/
+
+.gap {
+    position: relative;
+    transform: translateY(0em);
+    height: 100vh;
+}
+
+.gap::before {
+    position: absolute;
+    content: '';
+    background-color: rgba(0, 0, 0, 0.55);
+    height: 50vh;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    filter: blur(18px);
+}
+
+.gap::after {
+    position: absolute;
+    content: '';
+    background-image: url('../src/img/church.jpg');
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.gap .hero--intro {
+    position: absolute;
+    bottom: 0;
+    right: 1.5em;
+    width: 49rem;
+}
+
+.gap .hero--intro .hero-header {
+    font-size: 3rem;
+    font-family: Broadway, 'Times New Roman', Times, serif;
+    color: #f4f4f4;
+    text-shadow: 2px 4px 9px #000;
+    width: 45rem;
+    text-align: right;
+    margin-bottom: 0;
+}
+
+.hero-header .hero-header--text {
+    padding: 0.5rem 1.5rem;
+    background: -webkit-radial-gradient(89% 76%, ellipse cover, rgba(207, 104, 76, 0.774) 29%, rgba(222, 111, 26, 0.788) 59%);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    margin-bottom: 3px;
+    letter-spacing: 0.9px;
+}
+
+.gap .hero--content {
+    font-family: Lato, serif;
+    font-size: 19px;
+    color: rgb(226, 221, 221);
+    font-weight: 700;
+    line-height: 1.5em;
+    border-left: 2px #c2641c solid;
+    padding-left: 1rem;
+    text-shadow: 2px 2px 2px #000;
+}
+
+
+.author {
+    font-family: 'Gill Sans', serif;
+    font-size: 19px;
+    font-weight: 900;
+    text-align: right;
+    color: whitesmoke;
+
+    position: relative;
+}
+
+
+/******************************************
+****************** DAILY MANNA ***********/
+
+.daily--manna {
+    margin: auto 1rem;
+    margin-top: 5em;
+
+    padding: 0;
+    box-shadow: 2px 2px 2px #000;
+}
+
+.script-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.script-img {
+    height: 350px;
+}
+
+.manna-banner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2em;
+}
+
+.manna-banner .banner--caption {
+    color: rgb(187, 184, 184);
+    font-family: Ravie, serif;
+    font-size: 2rem;
+    text-shadow: 2px 2px 2px #000;
+}
+
+.manna-banner .fa-pen-nib {
+    border-right: 2px grey solid;
+    padding-right: 0.3em;
+    color: grey;
+    font-size: 2rem;
+    padding-left: 3px;
+}
+
+.script-img img {
+    width: 100%;
+}
+
+.scripture {
+    padding: 1.3rem;
+}
+
+.scripture .script-heading {
+    font-family: Harrington, Georgia, serif;
+    font-size: 1.3rem;
+}
+
+.scripture .script-content {
+    font-family: 'Roboto Cn', serif;
+    font-size: 18px;
+    line-height: 1.4em;
+}
+
+
+/******************************************
+***************** MISSION *****************/
+.the-mission {
+    padding: 2em;
+    margin: 5em 2em;
+}
+
+.mission-banner {
+    text-align: right;
+    font-size: 2rem;
+}
+
+.mission-banner .banner--caption {
+    font-family: Ravie, monospace, serif;
+    color: rgb(175, 173, 173);
+    border-right: 2px grey solid;
+    padding-right: 4px;
+    text-shadow: 2px 2px 2px #000;
+}
+
+.mission-banner .fa-globe {
+    color: rgb(85, 241, 85);
+
+    border-radius: 29px;
+    text-shadow: 2px 2px 2px #000;
+}
+
+
+.mission-image {
+    height: 13em;
+    width: 13em;
+    clip-path: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    margin: 1em;
+    float: left;
+}
+
+.mission-image .m-image {
+    height: 100%;
+}
+
+.mission-parag {
+    font-size: 19px;
+    font-family: Lato, serif;
+    line-height: 1.7em;
+}
+
+.mission-parag .fa-quote-left,
+.mission-parag .fa-quote-right {
+    font-size: 1.2rem;
+}
+
+.mission-parag .fa-medal {
+    display: block;
+    font-style: italic;
+    text-align: right;
+    color: crimson;
+}
+
+/*****************************************
+************* RECENT NEWS SECTION*********/
+
+.recent-news--section {
+    margin-top: 5em;
+    margin-bottom: 5em;
+    padding: 12px;
+}
+
+.recent-news--banner .banner-text {
+    color: rgb(187, 184, 184);
+    font-family: Ravie, serif;
+    font-size: 2rem;
+}
+
+.banner-text .fa-newspaper {
+    border-right: 2px grey solid;
+    padding-right: 0.3em;
+    color: grey;
+}
+
+.recent-news {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.9em;
+    padding: 12px;
+
+}
+
+.col-recent-1,
+.col-recent-2,
+.col-recent-3 {
+    box-shadow: 2px 2px 2px #000;
+    background-color: #f4f4f4;
+    border-radius: 2px 2px 2px 2px;
+    overflow: hidden;
+}
+
+.news--image {
+    position: relative;
+    overflow: hidden;
+}
+
+.news--image img {
+    width: 100%;
+}
+
+.news--date {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: goldenrod;
+    height: 3em;
+    width: 3em;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.news--date span {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.connect {
+    margin-top: 9px;
+    text-align: center;
+    padding: 4px 1px;
+}
+
+.connect .conn-lnk {
+    text-decoration: none;
+    font-size: 21px;
+    background-color: white;
+    padding: 8px 9px;
+    border-radius: 19px;
+    transition: all 0.3s ease-in-out;
+}
+
+.connect .conn-lnk:hover {
+    box-shadow: 0 -7px 27px 27px rgba(150, 150, 150, 0.1) inset,
+        2px -2px 39px 14px rgba(209, 209, 209, 0.7);
+}
+
+.connect .fab:active {
+    transform: translateY(2px) scale(0.8);
+}
+
+.connect .fa-facebook-f {
+    color: rgb(1, 79, 156);
+    padding: 8px 12px;
+}
+
+.connect .fa-facebook-f:hover {
+    color: white;
+    background-color: rgb(1, 79, 156);
+}
+
+.connect .fa-whatsapp {
+    color: #34af23;
+}
+
+.connect .fa-whatsapp:hover {
+    background-color: #34af23;
+    color: #fff;
+}
+
+.connect .fa-linkedin:hover {
+    background-color: #0077b5;
+    color: white;
+}
+
+.connect .fa-linkedin {
+    color: #0077b5;
+}
+
+.connect .fa-envelope:hover {
+    background-color: red;
+    color: white;
+}
+
+.connect .fa-envelope {
+    color: red;
+}
+
+.connect .conn-lnk:not(:first-child) {
+    margin-left: 1.2em;
+}
+
+
+.news--header {
+    font-family: Lato, monospace, serif;
+    font-size: 19px;
+    padding-left: 6px;
+    padding-bottom: 5px;
+
+    position: relative;
+}
+
+.news--header::after {
+    content: '';
+    position: absolute;
+    background-color: green;
+    left: 6px;
+    bottom: 0;
+    width: 6%;
+    height: 2px;
+}
+
+.news--content {
+    padding: 5px;
+}
+
+.news--parag {
+    font-size: 16px;
+    font-family: Alegreya, serif;
+    line-height: 1.55em;
+    border-left: 1.5px rgb(110, 110, 110) solid;
+    padding: 9px;
+    padding-left: 6px;
+}
+
+.news--content .note {
+    font-size: 13px;
+    font-family: 'Roboto Cn', serif;
+    display: block;
+    text-align: right;
+}
+
+
+/*******************************************
+*******************LIBRARY SECTION *********/
+
+.library--section {
+    padding: 2.5em;
+}
+
+.lib-logo {
+    text-align: center;
+}
+
+.logo--span {
+    font-size: 2rem;
+    position: relative;
+}
+
+.logo--span::after,
+.logo--span::before {
+    position: absolute;
+    content: "";
+    background-color: rgb(92, 91, 91);
+    height: 1px;
+    width: 34rem;
+}
+
+.logo--span::after {
+    top: 0.7em;
+    right: 2em;
+}
+
+.logo--span::before {
+    top: 0.7em;
+    left: 2em;
+}
+
+.logo--span .fa-hanukiah {
+    font-size: 2rem;
+    color: rgb(165, 42, 42);
+    text-shadow: 2px 2px 2px #000;
+}
+
+.lib--main {
+    overflow: hidden;
+    margin: 1em 2em;
+    max-width: 100%;
+    min-height: 500px;
+    position: relative;
+    background-color: rgb(224, 213, 213);
+    box-shadow: 2px 2px 2px #000;
+    border-radius: 5px;
+}
+
+.lib--main .lib-preamble {
+    background: -webkit-radial-gradient(89% 76%, ellipse cover, rgb(156, 200, 204) 5%, rgba(16, 199, 202, 0.767) 39%, rgb(4, 157, 165) 96%), url('../src/img/lib1.jpg');
+    background-size: cover;
+    background-position: right;
+    ;
+
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lib-preamble .preamble {
+    padding: 1.5em;
+}
+
+.preamble .preamble-content {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 1px rgb(48, 47, 47);
+}
+
+.preamble .fa-quote-left,
+.preamble .fa-quote-right {
+    color: green;
+}
+
+.preamble-content .fa-sticky-note {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #a52a2a;
+    transform: translateX(50%);
+    text-shadow: none;
+}
+
+
+.lib--main .overlay {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateX(50%);
+    transition: 0.5s transform ease-in-out;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background: -webkit-radial-gradient(89% 76%, ellipse cover, rgba(207, 104, 76, 0.568) 7%, rgba(222, 111, 26, 0.534) 55%, #9C3B11 90%), url('../src/img/lib1.jpg');
+    background-size: cover;
+
+}
+
+.overlay .overlay--left {
+    width: 100%;
+    height: 100%;
+
+    background-image: url('../src/img/lib1.jpg');
+    background-size: cover;
+    transform: translateX(0);
+    transition: 0.5s transform ease-in-out;
+
+}
+
+.overlay .overlay--right {
+    padding: 1.5em;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transform: translateX(0);
+    transition: 0.5s transform ease-in-out;
+
+}
+
+.overlay--right .overlay--heading {
+    font-size: 2rem;
+    font-family: Georgia, serif;
+    text-shadow: 2px 1px 2px #000000;
+}
+
+.overlay--right .overlay--content {
+    font-family: 'Roboto Cn', serif;
+    font-size: 0.9rem;
+    color: rgb(230, 225, 225);
+}
+
+.overlay--right .explore {
+    color: black;
+    text-decoration: none;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-weight: 700;
+
+    background-color: #fff;
+    padding: 9px 16px;
+    border-radius: 19px;
+    margin-top: 1rem;
+    box-shadow: 2px 2px 2px #000;
+    transform: translateY(0px);
+    transition: transform 0.3s;
+
+    position: relative;
+}
+
+.overlay--right .explore::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    border-radius: 29px;
+    z-index: -1;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.explore:hover::after {
+    transform: scale(1.4, 1.8);
+    opacity: 0;
+}
+
+.explore:active {
+    transform: translateY(2.5px);
+}
